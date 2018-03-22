@@ -1,0 +1,75 @@
+body{
+  margin: 0;
+  background:#222;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+header{
+  background: #55d6aa;
+}
+
+header::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo{
+  float: left;
+  width:100px !important;
+}
+
+nav{
+  float: right;
+  padding: 10px 0;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;/*Removes the Bullets from list items(li)*/
+}
+
+nav li{
+  /*  float: left;*/
+  display: inline-block;
+  margin-left: 20px;
+  padding-top: 25px;
+/*code for hover*/
+
+  position: relative;
+}
+
+nav a{
+  color:  #444;
+  text-decoration: none;/*Removes the underline*/
+  text-transform: uppercase;
+}
+
+nav a:hover{
+  color: #000;
+}
+
+/*code for hover*/
+nav a::before{
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 500ms;
+}
+
+nav a:hover::before{
+  width:100%;
+}
